@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Multiply",
+    "scriptFile": "repo.dll",
+    "entryPoint": "Company.Function.MyFirstApi.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "type": "httpTrigger",
+        "direction": "In",
+        "authLevel": "Anonymous",
+        "methods": [
+          "get",
+          "post"
+        ]
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "Out"
+      }
+    ]
+  },
+  {
+    "name": "MyFirstApi",
+    "scriptFile": "MyFirstApi.dll",
+    "entryPoint": "Company.Function.MyFirstApi.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "type": "httpTrigger",
+        "direction": "In",
+        "authLevel": "Anonymous",
+        "methods": [
+          "get",
+          "post"
+        ]
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "Out"
+      }
+    ]
+  }
+]
